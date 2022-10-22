@@ -12,7 +12,7 @@ class Book(models.Model):
     rating = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)])
     author = models.CharField(null=True, max_length=100)
-    is_bestselling = models.BooleanField(default=False)
+    is_bestselling = models.BooleanField(default=False)  
     # Harry Potter 1 => harry-potter-1
     slug = models.SlugField(default="", null=False, db_index=True)
 
